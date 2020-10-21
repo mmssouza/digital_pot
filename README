@@ -1,26 +1,27 @@
-----------------------------------------------
-INTERFACE PARA POTÊNCIOMETROS DIGITAIS AD5254
-----------------------------------------------
 
-- Introdução 
+INTERFACE MICROCONTROLADA PARA O POTENCIÔMETRO DIGITAL AD5254
+Marcelo M. S. Souza <marcelo@ufc.br>
 
-O AD5254 possui 4 potênciometros digitais controláveis
-através do protocolo de comunicação i2c.
+Introdução 
 
-Este projeto implementa tanto o protocolo de comunicação como a interface usuário para o controle dos potênciometros de um dispositivo AD5254 a partir do microcontrolador pic18f4550.
-A idéia final é utilizar essa interface no projeto de uma mesa de som de quatro canais com interface digital.
+Este projeto implementa, a partir do microcontrolador PIC18F4550, o protocolo de comunicação para o controle de 4 potênciometros digitais (AD5254) e uma interface usuário. O controle dos potênciometros digitais é realizado por comandos enviados através do protocolo i2c.
 
-- Descrição da interface usuário
+A interface usuário consiste em 3 push buttons e 4 leds. Os leds (LED1, LED2, LED3 e LED4) indicam qual dentre os potenciômetros (POT1, POT2, POT3 e POT4) está habilitado a receber comandos do usuário. Os push buttons possibilitam ao usuário fornecer comandos ao microcontrolador com as seguintes funcionalidades: 
 
-A interface de entrada é composta por 3 push buttons: 
+- SW1 (comando SEL): Seleção do potenciômetro habilitado a responder aos comandos de INC e DEC;
+- SW2 (comando INC): Incrementa a posição do eixo do potenciômetro habilitado;
+- SW3 (comando DEC): Decrementa a posição do eixo do potenciômetro habilitado;
 
-- SW1: Seleciona qual potênciometro os aceitará comandos (SEL)
-- SW2 : Comando incrementa (+)
-- SW3 : Comando decrementa (-)
+Referências
 
-A interface de saída indica qual o potênciometro atualmente selecionado, sendo composta por 4 leds: LED1 (POT1), LED2 (POT2), LED3 (POT3) e LED4 (POT4):
+- Microchip MPLABX integrated development environment
+https://www.microchip.com/mplab/mplab-x-ide
 
-- Estrutura dos diretórios do projeto:
+- Microchip PIC18F4550 microcontroller
+https://ww1.microchip.com/downloads/en/devicedoc/39632e.pdf
 
-- ad5253.x : software development (MPLABX project)
-- hardware : schematic and simulation (Proteus project)
+- Analog Device AD5254 four digital potentiometer
+https://www.analog.com/en/products/ad5254.html
+
+- Proteus design and simulation software
+https://www.labcenter.com/
