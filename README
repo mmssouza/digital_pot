@@ -1,0 +1,26 @@
+----------------------------------------------
+INTERFACE PARA POTÊNCIOMETROS DIGITAIS AD5254
+----------------------------------------------
+
+- Introdução 
+
+O AD5254 possui 4 potênciometros digitais controláveis
+através do protocolo de comunicação i2c.
+
+Este projeto implementa tanto o protocolo de comunicação como a interface usuário para o controle dos potênciometros de um dispositivo AD5254 a partir do microcontrolador pic18f4550.
+A idéia final é utilizar essa interface no projeto de uma mesa de som de quatro canais com interface digital.
+
+- Descrição da interface usuário
+
+A interface de entrada é composta por 3 push buttons: 
+
+- SW1: Seleciona qual potênciometro os aceitará comandos (SEL)
+- SW2 : Comando incrementa (+)
+- SW3 : Comando decrementa (-)
+
+A interface de saída indica qual o potênciometro atualmente selecionado, sendo composta por 4 leds: LED1 (POT1), LED2 (POT2), LED3 (POT3) e LED4 (POT4):
+
+- Estrutura dos diretórios do projeto:
+
+- ad5253.x : software development (MPLABX project)
+- hardware : schematic and simulation (Proteus project)
